@@ -30,47 +30,27 @@ public class Main{
         String line = null;
         for(int i=0; i<8;i++){
             switch (i) {
-                case 0 : line = board[0][0] + board[0][1] + board[0][2];
-                    if (line.equals("xxx"))
-                        return "x";
-                    else if (line.equals("ooo"))
-                        return "o";
-                case 1 : line = board[1][0] + board[1][1] + board[1][2];
-                    if (line.equals("xxx"))
-                        return "x";
-                    else if (line.equals("ooo"))
-                        return "o";
-                case 2 : line = board[2][0] + board[2][1] + board[2][2];
-                    if (line.equals("xxx"))
-                        return "x";
-                    else if (line.equals("ooo"))
-                        return "o";
-                case 3 : line = board[0][0] + board[1][0] + board[2][0];
-                    if (line.equals("xxx"))
-                        return "x";
-                    else if (line.equals("ooo"))
-                        return "o";
-                case 4 : line = board[0][1] + board[1][1] + board[2][1];
-                    if (line.equals("xxx"))
-                        return "x";
-                    else if (line.equals("ooo"))
-                        return "o";
-                case 5 : line = board[0][2] + board[1][1] + board[2][2];
-                    if (line.equals("xxx"))
-                        return "x";
-                    else if (line.equals("ooo"))
-                        return "o";
-                case 6 : line = board[0][0] + board[1][1] + board[2][2];
-                    if (line.equals("xxx"))
-                        return "x";
-                    else if (line.equals("ooo"))
-                        return "o";
-                case 7 : line = board[0][2] + board[1][1] + board[2][0];
-                    if (line.equals("xxx"))
-                        return "x";
-                    else if (line.equals("ooo"))
-                        return "o";
+                case 0 -> line = board[0][0] + board[0][1] + board[0][2];
+
+                case 1 -> line = board[1][0] + board[1][1] + board[1][2];
+
+                case 2 -> line = board[2][0] + board[2][1] + board[2][2];
+
+                case 3 -> line = board[0][0] + board[1][0] + board[2][0];
+
+                case 4 -> line = board[0][1] + board[1][1] + board[2][1];
+
+                case 5 -> line = board[0][2] + board[1][2] + board[2][2];
+
+                case 6 -> line = board[0][0] + board[1][1] + board[2][2];
+
+                case 7 -> line = board[0][2] + board[1][1] + board[2][0];
+
             }
+            if (line.equals("xxx"))
+                return "x";
+            else if (line.equals("ooo"))
+                return "o";
         }
 
 
@@ -88,7 +68,7 @@ public class Main{
                     }
                     else
                         System.out.println(turn+"'s turn to the start the game");
-                        return null;
+                    return null;
 
 
                 }
